@@ -10,11 +10,11 @@
  <div id="header">
  <h1>Dankemon</h1>
  </div>
- <div id="gamediv"> 
- 	<p>THIS IS WHERE THE GAME WILL GO</p>
+ <div id="gamediv">
+ 	<p>THIS IS WHERE THE GAME WILL GO!</p>
  </div>
  <div id="newsdiv">
- <p>THIS IS WHERE THE NEWS WILL GO</p>
+ <p>THIS IS WHERE THE NEWS WILL GO!</p>
  </div>
 </body>
 </html>
