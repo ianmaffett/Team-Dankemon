@@ -1,0 +1,15 @@
+* {
+	font-family:courier;
+	text-align:center;
+}
+#header li {
+	display:inline;
+}
+#gamediv {
+	float:left;
+	width:75%;
+}
+#newsdiv {
+	float:right;
+	width:25%;
+}

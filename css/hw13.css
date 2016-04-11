@@ -1,0 +1,30 @@
+* {	
+	font-family: Arial, Verdana, sans-serif;
+	color: #665544;
+	text-align: center;
+}
+#nav, #feature, .article, #footer {
+	background-color: #efefef;
+	margin-top: 20px;
+	padding: 10px 0px 5px 0px;
+}
+#feature, .article {
+	height: 300px;
+}
+li {
+	display: inline;
+	padding: 5px;
+	}
+#album {
+	float:right;
+	height:200px;
+	width:200px;
+	position:floating;
+	margin: 0px 20px 0px 20px;
+}
+#feature p {
+	float:left;
+	position:absolute;
+	width:720px;
+	text-align:left;
+}
