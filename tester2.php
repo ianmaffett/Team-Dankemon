@@ -8,7 +8,7 @@
 <body>
  <?php 
   $str = 'This is a test!!';
-  echo $str
+  echo $str;
  ?>
 </body>
 </html>
