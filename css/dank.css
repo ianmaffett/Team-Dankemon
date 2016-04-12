@@ -10,6 +10,16 @@
 	width:75%;
 }
 #newsdiv {
+	clear:right;
+	float:right;
+	width:25%;
+	height:500px;
+	overflow-y:scroll;
+}
+.small {
+	font-size:50%;
+}
+.right {
 	float:right;
 	width:25%;
 }

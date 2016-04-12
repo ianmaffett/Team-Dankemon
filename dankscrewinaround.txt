@@ -1,0 +1,7 @@
+$i = 0;
+  		for($i = 0 ; $i < 3 ; $i++) {
+  			$str .= "<h5>" . $xml->channel->item[$i]->title . "</h5>";
+  		}
+  		
+$kids = $xml->channel->children('item', TRUE);
+$max = count($kids);
