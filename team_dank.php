@@ -10,13 +10,14 @@
  <div id="header">
  <h1>Dankemon</h1>
  </div>
- <div id="gamediv"> 
- 	<p>THIS IS WHERE THE GAME WILL GO</p>
+ <div id="gamediv">
+ 	<p>THIS IS WHERE THE GAME WILL GO!</p>
  </div>
  <span class="right">
  	<h2>Pokemon News</h2>
  </span> 
  <div id="newsdiv">
+<<<<<<< HEAD
  <?php
  	function makenews() {
   		$xml = simplexml_load_file("http://bulbanews.bulbagarden.net/feed/news.rss") or die("Error: Cannot find file");
@@ -34,6 +35,9 @@
  	
  	makenews();
  ?>
+=======
+ <p>THIS IS WHERE THE NEWS WILL GO!</p>
+>>>>>>> origin/tests
  </div>
 </body>
 </html>
