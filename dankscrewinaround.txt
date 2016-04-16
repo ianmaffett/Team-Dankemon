@@ -16,3 +16,31 @@ INSERT INTO pokemon (name, type1, hp, att, def, spatt, spdef, spd, move1, move1t
 
 INSERT INTO pokemon (name, type1, hp, att, def, spatt, spdef, spd, move1, move1type, move1pow, move1acc, move1pp, move2, move2type, move2pow, move2acc, move2pp, move3, move3type, move3pow, move3acc, move3pp, move4, move4type, move4pow, move4acc, move4pp, move1phys, move2phys, move3phys, move4phys) VALUES ('Snorlax','Normal',160,110,65,65,110,30,'Body Slam','Normal',85,100,15,'Ice Beam','Ice',95,100,10,'Crunch','Dark',80,100,15,'Hyperbeam','Normal',120,100,5,true,false,true,false)
 
+Data: hey
+Notice: Undefined index: creusername in /home/pirainoa/public_html/Team-Dankemon/php/create.php on line 5
+
+Notice: Undefined index: crepassword in /home/pirainoa/public_html/Team-Dankemon/php/create.php on line 6
+
+Notice: Undefined index: creplayer in /home/pirainoa/public_html/Team-Dankemon/php/create.php on line 7
+
+Notice: Undefined index: crerival in /home/pirainoa/public_html/Team-Dankemon/php/create.php on line 8
+
+Notice: Undefined index: creemail in /home/pirainoa/public_html/Team-Dankemon/php/create.php on line 9
+Could not connect to database: Unknown MySQL server host 'http://cscilab.bc.edu/phpmyadmin/index.php?db=pirainoa&token=4ed3034051823cd4669b3b6d31334eca' (1)
+Status: success
+
+$user = $_POST['creusername'];
+$pass = sha1($_POST['crepassword']);
+$play = $_POST['creplayer'];
+$riv = $_POST['crerival'];
+$email = $_POST['creemail'];
+
+"datauser":null,"datapass":"da39a3ee5e6b4b0d3255bfef95601890afd80709","dataplay":null,"datariv":null,"dataemail":null}Could not connect to database: Access denied for user 'pirainoa'@'localhost' (using password: YES)
+
+$data_from_post = array('datauser' => $user, 'datapass' => $pass, 'dataplay' => $play, 'datariv' => $riv, 'dataemail' => $email);
+echo json_encode($data_from_post);
+
+	$.post("php/create.php",
+		{user:creuser,pass:crepass,play:creplay,riv:creriv,email:creemail},
+		function(data,status,jqXHR){
+            alert("Data: " + data + "\nStatus: " + status)}
