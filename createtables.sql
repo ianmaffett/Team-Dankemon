@@ -1,5 +1,6 @@
 drop table if exists members;
 drop table if exists pokemon;
+drop table if exists types;
 
 create table members(
 	id int not null auto_increment,
@@ -53,4 +54,12 @@ create table pokemon(
 	move3phys boolean,
 	move4phys boolean,
 	primary key(id)
+);
+
+create table types (
+	id int not null auto_increment,
+	poketype varchar(25),
+	movetype varchar(25),
+	result int,
+	primary key (id)
 );
