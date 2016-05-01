@@ -1,9 +1,9 @@
 $("#submit").click(function() {
 	var posts = {user:$("#username").val(),pass:$("#password").val()};
-	pass_post(posts);
+	pass_post_val(posts);
 });
 
-function pass_post(posts) {
+function pass_post_val(posts) {
 		$.ajax({
 			url:"php/valuser.php",
 			method:"POST",
@@ -12,4 +12,5 @@ function pass_post(posts) {
 				alert(data + status);
 			}
 		});
+		
 }
