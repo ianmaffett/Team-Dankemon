@@ -48,3 +48,8 @@ echo json_encode($data_from_post);
 		{user:creuser,pass:crepass,play:creplay,riv:creriv,email:creemail},
 		function(data,status,jqXHR){
             alert("Data: " + data + "\nStatus: " + status)}
+
+
+select * from pokemon where id=i; inside a for loop through i=1,2,3,4,5,6
+
+they choose 
