@@ -1,0 +1,39 @@
+//SQL Queries for Pokemon information and images
+
+alter table pokemon add pokeinfo varchar(500);
+alter table pokemon add pokeimg varchar(500);
+
+//Venasaur:
+
+update pokemon set pokeinfo='http://www.serebii.net/pokedex-xy/003.shtml' where name='venasaur';
+update pokemon set pokeimg='http://img.pokemondb.net/sprites/black-white/anim/normal/venusaur-f.gif' where name='venasaur';
+
+
+//Blastoise:
+
+update pokemon set pokeinfo='http://www.serebii.net/pokedex-xy/009.shtml' where name='blastoise';
+update pokemon set pokeimg='http://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif' where name='blastoise';
+
+
+//Charizard:
+
+update pokemon set pokeinfo='http://www.serebii.net/pokedex-xy/006.shtml' where name='charizard';
+update pokemon set pokeimg='http://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif' where name='charizard';
+
+
+//Pikachu:
+
+update pokemon set pokeinfo='http://www.serebii.net/pokedex-xy/025.shtml' where name='pikachu';
+update pokemon set pokeimg='http://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif' where name='pikachu';
+
+
+//Snorlax:
+
+update pokemon set pokeinfo='http://www.serebii.net/pokedex-xy/143.shtml' where name='snorlax';
+update pokemon set pokeimg='http://img.pokemondb.net/sprites/black-white/anim/normal/snorlax.gif' where name='snorlax';
+
+
+//Espeon:
+
+update pokemon set pokeinfo='http://www.serebii.net/pokedex-bw/196.shtml' where name='espeon';
+update pokemon set pokeimg='http://img.pokemondb.net/sprites/black-white/anim/normal/espeon.gif' where name='espeon';
