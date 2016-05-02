@@ -9,7 +9,6 @@ function valid(posts) {
 		data:posts,
 		datatype:"text"
 	});
-<<<<<<< HEAD
 
 	return data;
 }
@@ -29,11 +28,10 @@ function pass_post(posts) {
 	else {
 		alert("Account already exists");
 	}
-=======
-	
+
 	request.done(function(data) {
 		if(data == 0) {
-		
+
 		$.ajax({
 			url:"php/create.php",
 			type:"POST",
@@ -41,11 +39,10 @@ function pass_post(posts) {
 		});
 		alert("Account created!")
 		}
-		else { 
+		else {
 			alert("Account already exists");
 		}
 	});
->>>>>>> origin/tests
 }
 
 $("#cre").click(function() {
@@ -56,14 +53,11 @@ $("#cre").click(function() {
 	var creemail = $("#creemail").val();
 
 	var posts = {user:creuser,pass:crepass,play:creplay,riv:creriv,email:creemail};
-<<<<<<< HEAD
 
 	var val = val(posts);
 	alert(val);
-=======
-	
+
 	valid(posts);
->>>>>>> origin/tests
 });
 
 $("#create").click(function() {
