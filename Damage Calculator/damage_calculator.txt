@@ -1,0 +1,35 @@
+//Damage Calculator
+
+//From Serebii.net:
+
+Damage = ((((2 * Level / 5 + 2) * AttackStat * AttackPower / DefenseStat) / 50) + 2) * STAB * Weakness/Resistance * RandomNumber / 100
+
+//Simplify?
+
+-Define all Pokemon Levels as 50
+	-(2 * Level / 5 + 2) = 22
+
+-AttackStat (attack or special attack depending on the move being used) = att/spatt
+	-Could average between the two to make it easier?
+	
+-AttackPower = move(1,2,3,4)pow
+
+-DefenseStat = Opponent's def/spdef
+	-Could average between the two to make it easier
+
+-STAB (Same Type Attack Bonus) = 1.5X multiplyer
+	-Do we really need this?
+	
+	//NO STAB!!!!!!!
+
+-Weakness / Resistance (effectiveness of moves against opponents type) = [.5, 1.0, 2.0]X multiplyer
+	-Using type table perhaps?
+
+-RandomNumber (between 85 and 100) = Could just use Math.Floor, Math.Random, etc.
+	-But is this even necessary?
+	
+	//NO RANDOMNUMBER!!!
+
+//Simplified Calculator (Tentative):
+
+Damage = ((22 * (att or spatt) * (move(1,2,3,4)pow/(def of spdef))/50)+2) * Weakness/Resistance
