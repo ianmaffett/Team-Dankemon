@@ -2,19 +2,18 @@ $(document).ready(function() {
 	$("#creform").hide();
 });
 
-function val(posts) {
-		$.ajax({
-			url:"php/valuser.php",
-			method:"POST",
-			data:posts,
-			success:function(data,status,jqXHR){
-				alert(data + status);
-			},
-			failure: function() {alert("!!!");}
+var result = "...";
+
+function valid(posts) {
+	var request = $.ajax({
+		url:"php/valuser.php",
+		method:"POST",
+		data:posts,
+		datatype:"text"
 	});
 	
-	return data;
-}
+	request.done(function(data) { $("#testdiv") = data } );
+};
 
 /*function pass_post(posts) {
 	
@@ -42,8 +41,9 @@ $("#cre").click(function() {
 	
 	var posts = {user:creuser,pass:crepass,play:creplay,riv:creriv,email:creemail};
 	
-	var val = val(posts);
-	alert(val);
+	valid(posts);
+	
+	alert("jQuery!!!! " + result);
 });
 
 $("#create").click(function() {

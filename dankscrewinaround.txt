@@ -77,3 +77,15 @@ else {
 }
 
 echo $strres['username'];
+
+,play:creplay,riv:creriv,email:creemail};
+
+,
+			success:function(data,status,jqXHR){
+				alert("Ajax!!! " + data + status);
+			},
+			error:function(data,status,jqXHR){
+				alert("Ajax!!! " + data + status);
+			}
+			
+			String(valid(posts).success(function(data){return data}))

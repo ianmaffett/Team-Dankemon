@@ -12,7 +12,6 @@ $query = "insert into members (username,password,wins,losses,player,rival,email)
 $result = mysqli_query ($dbc, $query) OR die('Invalid query: ' . mysqli_error($dbc));
 
 
-
 echo $result;
 
 ?>
