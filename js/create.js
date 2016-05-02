@@ -2,8 +2,6 @@ $(document).ready(function() {
 	$("#creform").hide();
 });
 
-var result = "...";
-
 function valid(posts) {
 	var request = $.ajax({
 		url:"php/valuser.php",
@@ -12,25 +10,21 @@ function valid(posts) {
 		datatype:"text"
 	});
 	
-	request.done(function(data) { $("#testdiv") = data } );
-};
-
-/*function pass_post(posts) {
-	
-	if(data == 0) {
+	request.done(function(data) {
+		if(data == 0) {
 		
-	$.ajax({
-		url:"php/create.php",
-		type:"POST",
-		data:posts,
-		success:function(data,status,jqXHR){
-            alert("Data: " + data + "\nStatus: " + status)}
+		$.ajax({
+			url:"php/create.php",
+			type:"POST",
+			data:posts
+		});
+		alert("Account created!")
+		}
+		else { 
+			alert("Account already exists");
+		}
 	});
-	}
-	else { 
-		alert("Account already exists");
-	}
-}*/
+}
 
 $("#cre").click(function() { 
 	var creuser = $("#creusername").val();
@@ -42,8 +36,6 @@ $("#cre").click(function() {
 	var posts = {user:creuser,pass:crepass,play:creplay,riv:creriv,email:creemail};
 	
 	valid(posts);
-	
-	alert("jQuery!!!! " + result);
 });
 
 $("#create").click(function() {
