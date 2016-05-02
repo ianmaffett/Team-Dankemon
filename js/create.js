@@ -1,6 +1,9 @@
 $(document).ready(function() {
 	$("#creform").hide();
+	$("#choose").hide();
+	$("#chooseform").hide();
 });
+
 
 function valid(posts) {
 	var request = $.ajax({

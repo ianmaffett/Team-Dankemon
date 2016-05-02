@@ -111,3 +111,51 @@ echo $strres['username'];
 		alert("Account already exists");
 	}
 }*/
+
+
+success:function(data,status,jqXHR){
+				alert("Ajax!!! " + data + status);
+			},
+			error:function(data,status,jqXHR,error){
+				alert("Ajax!!! " + data + status + error);
+			}
+			
+			
+			$("#create").hide();
+				$("#forgot").hide();
+				$("#login").hide();
+				$("#choose").show();
+				
+	
+$("#logoff").click(function(){
+	$.ajax({
+		url:"php/login.php",
+		method:"GET",
+		data:{login:0},
+		success:function(data,status,jqXHR){
+			alert("Login session started " + data + status);
+		},
+		error:function(data,status,jqXHR,error){
+			alert("Login session failed " + data + status + error);
+		}
+	});
+});
+
+<button name="logoff" id="logoff">Log Off</button>
+
+
+
+$.ajax({
+					url:"php/login.php",
+					method:"GET",
+					data:{login:1},
+					success:function(data,status,jqXHR){
+						alert("Login session started " + data + status);
+					},
+					error:function(data,status,jqXHR,error){
+						alert("Login session failed " + data + status + error);
+					}
+				});
+				
+				
+	$i
