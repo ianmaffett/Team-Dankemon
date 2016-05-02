@@ -77,3 +77,37 @@ else {
 }
 
 echo $strres['username'];
+
+,play:creplay,riv:creriv,email:creemail};
+
+,
+			success:function(data,status,jqXHR){
+				alert("Ajax!!! " + data + status);
+			},
+			error:function(data,status,jqXHR){
+				alert("Ajax!!! " + data + status);
+			}
+			
+			String(valid(posts).success(function(data){return data}))
+			
+			
+
+	request.done(function(data) { $("#testdiv") = data } );
+};
+
+/*function pass_post(posts) {
+	
+	if(data == 0) {
+		
+	$.ajax({
+		url:"php/create.php",
+		type:"POST",
+		data:posts,
+		success:function(data,status,jqXHR){
+            alert("Data: " + data + "\nStatus: " + status)}
+	});
+	}
+	else { 
+		alert("Account already exists");
+	}
+}*/
