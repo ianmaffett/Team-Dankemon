@@ -2,6 +2,14 @@
 	font-family:courier;
 	text-align:center;
 }
+
+h1 {font-size: 250%; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: white}
+h2 {color: #808080; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: black}
+
+body {background-color: #007EA7;}
+
+#pokenews1 {background-color: white;}
+
 #header li {
 	display:inline;
 }
@@ -15,6 +23,7 @@
 	width:25%;
 	height:300px;
 	overflow-y:scroll;
+	background-color:white;
 }
 
 #newsdiv1 {
@@ -31,3 +40,6 @@
 	float:right;
 	width:25%;
 }
+
+
+
