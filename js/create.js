@@ -3,6 +3,8 @@ $(document).ready(function() {
 	$("#choose").hide();
 	$("#chooseform").hide();
 	$("#choosepoke").hide();
+	$("#gameleft").hide();
+	$("#gameright").hide();
 });
 
 

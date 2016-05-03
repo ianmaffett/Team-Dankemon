@@ -217,3 +217,7 @@ $.ajax({
 			
 			
 	pokemon.toString(",") + "<br>" + move1.toString(",") + "<br>" + move2.toString(",") + "<br>" + move3.toString(",") + "<br>" + move4.toString(",")
+	
+	5/3
+	
+	$("#move1radio").val(move1[0]);

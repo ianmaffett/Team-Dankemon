@@ -5,17 +5,32 @@ var move3 = new Array();
 var move4 = new Array();
 var hp = 0;
 
+var mewtwo = new Array ("Mewtwo","Psychic",106,110,90,154,90,130,"http://img.pokemondb.net/sprites/black-white/anim/normal/mewtwo.gif");
+var mewmove1 = new Array ("Headbutt","Normal",70,100,null,15);
+var mewmove2 = new Array ("Body Slam","Normal",85,100,null,15);
+var mewmove3 = new Array ("Psychic","Psychic",90,100,null,10);
+var mewmove4 = new Array ("Psystrike","Psychic",100,100,null,10);
+var opphp = mewtwo[2];
+
 function creategame(pokemon,move1,move2,move3,move4) {
 	var hp = pokemon[2];
-	var outstr = "";
-	outstr += "<div class='gameleft'><img src='" + pokemon[8] + "' alt='Your Pokemon' /><br><br>";
-	outstr += hp + "/" + pokemon[2] + "<br><br>";
-	outstr += "<input type='radio' name='move' value='" + move1[0] + "'> " + move1[0] + "<br>";
-	outstr += "<input type='radio' name='move' value='" + move2[0] + "'> " + move2[0] + "<br>";
-	outstr += "<input type='radio' name='move' value='" + move3[0] + "'> " + move3[0] + "<br>";
-	outstr += "<input type='radio' name='move' value='" + move4[0] + "'> " + move4[0] + "<br><br>";
-	outstr += "<button name='choosemove' id='choosemove'>Attack!</button>";
-	return outstr;
+	
+	$("#pokeimg").attr("src",pokemon[8]);
+	$("#pokeimg").attr("alt",pokemon[8]);
+	$("#move1").html(move1[0]);
+	$("#move2").html(move2[0]);
+	$("#move3").html(move3[0]);
+	$("#move4").html(move4[0]);
+	$("#curhp").html(hp);
+	$("#tothp").html(pokemon[2]);
+	
+	$("#mewtwoimg").attr("src",mewtwo[8]);
+	$("#mewtwoimg").attr("alt",mewtwo[8]);
+	$("#opphp").html(opphp);
+	$("#totalopphp").html(mewtwo[2]);
+	
+	$("#gameleft").show();
+	$("#gameright").show();
 }
 
 function makegame() {
@@ -39,7 +54,7 @@ function makegame() {
 		async:false
 	});
 	
-	$("#gamediv").append(creategame(pokemon,move1,move2,move3,move4));
+	creategame(pokemon,move1,move2,move3,move4);
 	
 }
 

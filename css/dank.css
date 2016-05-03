@@ -45,22 +45,23 @@ body {
 	float:right;
 	width:25%;
 }
-.gameright {
+#gameright {
 	clear:right;
 	float:right;
-	background-color:#56ffcb;
+	background-color:#f15635;
 	opacity:.90;
-	width:300px;
-	height:200px;
+	border-style:inset;
+	width:40%;
+	height:50%;
 }
-.gameleft {
+#gameleft {
 	clear:left;
 	float:left;
-	background-color:#f15635;
-	opacity:.25;
+	background-color:#56ffcb;
+	opacity:.90;
 	border-style:inset;
-	width:300px;
-	height
+	width:40%;
+	height:50%;
 }
 
 
