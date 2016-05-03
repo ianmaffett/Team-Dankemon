@@ -31,6 +31,7 @@
  	<button name="choose" id="choose">Choose your pokemon!</button>
  	<form name="chooseform" id="chooseform">
  	</form>
+ 	<button name='choosepoke' id='choosepoke'>Choose!</button>
  </div>
  <span class="right">
  	<h2>Pokemon News</h2>
@@ -43,6 +44,7 @@
  </div>
   <script src="js/create.js" type="text/javascript"></script>
   <script src="js/valuser.js" type="text/javascript"></script>
+  <script src="js/makegame.js" type="text/javascript"></script>
   <?php 
  	if (isset($_GET['login'])) {
  		echo '<script src="js/choose.js" type="text/javascript"></script>';

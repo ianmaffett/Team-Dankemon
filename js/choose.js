@@ -113,11 +113,35 @@ function makechoose() {
 		
 		
 	
-	var outstr = "<a href='" + ;
+	var outstr = "<input type='radio' name='pokemon' value='" + poke1name + "' checked>";
+		outstr += "<img src='" + poke1img + "' alt='" + poke1info + "' /><br>";
+	 	outstr += "<a href='" + poke1info + "'>" + poke1name + "</a></input><br><br>";
+	 	
+	 	outstr += "<input type='radio' name='pokemon' value='" + poke2name + "'>";
+		outstr += "<img src='" + poke2img + "' alt='" + poke2info + "' /><br>";
+	 	outstr += "<a href='" + poke2info + "'>" + poke2name + "</a></input><br><br>";
+	 	
+	 	outstr += "<input type='radio' name='pokemon' value='" + poke3name + "'>";
+		outstr += "<img src='" + poke3img + "' alt='" + poke3info + "' /><br>";
+	 	outstr += "<a href='" + poke3info + "'>" + poke3name + "</a></input><br><br>";
+
+		outstr += "<input type='radio' name='pokemon' value='" + poke4name + "'>";
+		outstr += "<img src='" + poke4img + "' alt='" + poke4info + "' /><br>";
+	 	outstr += "<a href='" + poke4info + "'>" + poke4name + "</a></input><br><br>";
+
+		outstr += "<input type='radio' name='pokemon' value='" + poke5name + "'>";
+		outstr += "<img src='" + poke5img + "' alt='" + poke5info + "' /><br>";
+	 	outstr += "<a href='" + poke5info + "'>" + poke5name + "</a></input><br><br>";
+
+		outstr += "<input type='radio' name='pokemon' value='" + poke6name + "'>";
+		outstr += "<img src='" + poke6img + "' alt='" + poke6info + "' /><br>";
+	 	outstr += "<a href='" + poke6info + "'>" + poke6name + "</a></input><br><br>";
+
 	return outstr;
 }
 
 $("#choose").click(function() {
 	$("#choose").hide();
+	$("#choosepoke").show();
 	$("#chooseform").append(makechoose());
 });

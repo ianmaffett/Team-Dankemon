@@ -2,6 +2,7 @@ $(document).ready(function() {
 	$("#creform").hide();
 	$("#choose").hide();
 	$("#chooseform").hide();
+	$("#choosepoke").hide();
 });
 
 
