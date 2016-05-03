@@ -214,3 +214,6 @@ $.ajax({
 				poke1name = data.name;
 			},
 			"json");
+			
+			
+	pokemon.toString(",") + "<br>" + move1.toString(",") + "<br>" + move2.toString(",") + "<br>" + move3.toString(",") + "<br>" + move4.toString(",")

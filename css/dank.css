@@ -40,6 +40,19 @@ body {background-color: #007EA7;}
 	float:right;
 	width:25%;
 }
+.gameright {
+	clear:right;
+	float:right;
+	background-color:#56ffcb;
+	opacity:.25;
+}
+.gameleft {
+	clear:left;
+	float:left;
+	background-color:#f15635;
+	opacity:.25;
+	border-style:inset;
+}
 
 
 
