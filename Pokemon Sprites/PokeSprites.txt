@@ -21,3 +21,14 @@
 //Espeon:
 
 <a href="http://pokemondb.net/pokedex/espeon"><img src="http://img.pokemondb.net/sprites/black-white/anim/normal/espeon.gif" alt="Espeon"></a>
+
+
+//MEWTWO STUFF!!!!!
+
+<img src="http://img.pokemondb.net/sprites/black-white/anim/normal/mewtwo.gif" alt="Espeon">
+
+var mewtwo = new array ("Mewtwo", "Psychic", 106, 110, 90, 154, 90, 130);
+var mewmove1 = new array ("Headbutt", "Normal", 70, 100,, 15);
+var mewmove2 = new array ("Body Slam", "Normal", 85, 100,, 15);
+var mewmove3 = new array ("Psychic", "Psychic", 90, 100,, 10);
+var mewmove4 = new array ("Psystrike", "Psychic", 100, 100,, 10);
