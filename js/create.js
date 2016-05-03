@@ -5,6 +5,7 @@ $(document).ready(function() {
 	$("#choosepoke").hide();
 	$("#gameleft").hide();
 	$("#gameright").hide();
+	$("#reset").hide();
 });
 
 

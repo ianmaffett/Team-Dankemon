@@ -9,6 +9,10 @@
 	 <script src="js/makenews.js" type="text/javascript"></script>
 </head>
 <body>
+ <audio autoplay loop="loop">
+	  <source src="http://66.90.91.26/ost/pokemon-gold-silver/aykljeeyyc/26-pokemon-gym.mp3" type="audio/mpeg">
+ </audio>
+ 
  <div id="header">
  <h1>Dankemon</h1>
  </div>
@@ -32,6 +36,7 @@
  	 <button name='choosepoke' id='choosepoke'>Choose!</button><br><br>
  	<form name="chooseform" id="chooseform">
  	</form>
+ 	<button name="reset" id="reset">Play Again</button>
  	
  	<div id='gameleft'>
  		<img src='' alt='Your Pokemon' id="pokeimg" /><br><br>
