@@ -29,7 +29,7 @@
  	<input type="submit" name="cre" id="cre" value="Create Account" />
  	</form>
  	<button name="choose" id="choose">Choose your pokemon!</button>
- 	 <button name='choosepoke' id='choosepoke'>Choose!</button>
+ 	 <button name='choosepoke' id='choosepoke'>Choose!</button><br><br>
  	<form name="chooseform" id="chooseform">
  	</form>
  </div>

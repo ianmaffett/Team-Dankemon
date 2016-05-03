@@ -3,10 +3,18 @@ var move1 = new Array();
 var move2 = new Array();
 var move3 = new Array();
 var move4 = new Array();
+var hp = 0;
 
 function creategame(pokemon,move1,move2,move3,move4) {
+	var hp = pokemon[2];
 	var outstr = "";
-	outstr += "<div class='gameleft'><img src='" + pokemon[8] + "' alt='Your Pokemon' /></div>";
+	outstr += "<div class='gameleft'><img src='" + pokemon[8] + "' alt='Your Pokemon' /><br><br>";
+	outstr += hp + "/" + pokemon[2] + "<br><br>";
+	outstr += "<input type='radio' name='move' value='" + move1[0] + "'> " + move1[0] + "<br>";
+	outstr += "<input type='radio' name='move' value='" + move2[0] + "'> " + move2[0] + "<br>";
+	outstr += "<input type='radio' name='move' value='" + move3[0] + "'> " + move3[0] + "<br>";
+	outstr += "<input type='radio' name='move' value='" + move4[0] + "'> " + move4[0] + "<br><br>";
+	outstr += "<button name='choosemove' id='choosemove'>Attack!</button>";
 	return outstr;
 }
 
