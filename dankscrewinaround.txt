@@ -217,3 +217,10 @@ $.ajax({
 			
 			
 	pokemon.toString(",") + "<br>" + move1.toString(",") + "<br>" + move2.toString(",") + "<br>" + move3.toString(",") + "<br>" + move4.toString(",")
+	
+	
+//Audio Stuff
+
+	<audio autoplay loop="loop">
+	  <source src="http://66.90.91.26/ost/pokemon-gold-silver/aykljeeyyc/26-pokemon-gym.mp3" type="audio/mpeg">
+	</audio>
