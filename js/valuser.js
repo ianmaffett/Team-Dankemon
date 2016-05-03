@@ -18,12 +18,20 @@ function pass_post_val(posts) {
 	
 	request.done(function(data) {
 		if(data == 1) {
+		
 		var passreq = $.ajax({
 			url:"php/valpass.php",
 			type:"POST",
 			data:posts2,
-			dataType:"text"
+			dataType:"text",
+			error:function(data,error){
+				alert(data + ' ' + error);
+			}
 		});
+		
+		passreq.error(function(data,error) {
+			alert(data + ' ' + error);
+		})
 		
 		passreq.done(function(data) {
 			if(data == 1) {
@@ -41,4 +49,5 @@ function pass_post_val(posts) {
 			alert("Username does not exist!");
 		}
 	});
+	return false;
 }

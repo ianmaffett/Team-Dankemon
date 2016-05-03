@@ -47,6 +47,7 @@
  	if (isset($_GET['login'])) {
  		echo '<script src="js/choose.js" type="text/javascript"></script>';
  	}
+ 
  	
  ?>
 </body>

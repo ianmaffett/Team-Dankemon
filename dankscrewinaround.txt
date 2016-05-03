@@ -159,3 +159,58 @@ $.ajax({
 				
 				
 	$i
+	
+	
+	
+	var passreq = $.ajax({
+			url:"php/valpass.php",
+			type:"POST",
+			data:posts2,
+			dataType:"text",
+			error:function(data,error){
+				alert(data + ' ' + error);
+			}
+		});
+		
+		var passreq = $.post(
+			"php/valpass.php",
+			posts2,
+			function(data,error){
+				alert("Success!");
+			},
+			dataType:"text")
+		);
+		
+	
+		
+		
+		
+		var choosereq = $.ajax({
+			url:"php/choose.php",
+			method:"GET",
+			data:i,
+			dataType:"json",
+			error:function(data,status,error){
+				alert(data+status+error);
+			}
+		});
+		
+		choosereq.done(function(data){
+			pokes.push(data["name"])
+		});
+		
+		$.getJSON("php/choose.php",function(data) {
+			$.each(data, function(name,pokeinfo,pokeimg){
+				pokes.push(name,pokeinfo,pokeimg);
+			});
+		});
+		
+		
+		var poke1 = $.get(
+			"php/choose.php",
+			{"id":1},
+			function(data){
+				alert(data.name);
+				poke1name = data.name;
+			},
+			"json");
