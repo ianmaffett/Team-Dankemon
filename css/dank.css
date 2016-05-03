@@ -6,9 +6,14 @@
 h1 {font-size: 250%; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: white}
 h2 {color: #808080; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: black}
 
-body {background-color: #007EA7;}
+body {
+	background-color: #007EA7;
+}
 
-#pokenews1 {background-color: white;}
+#pokenews1 {
+	background-color:#e6dfd7;
+	border-style:inset;
+}
 
 #header li {
 	display:inline;
@@ -23,7 +28,7 @@ body {background-color: #007EA7;}
 	width:25%;
 	height:300px;
 	overflow-y:scroll;
-	background-color:white;
+	background-color:#e6dfd7;
 }
 
 #newsdiv1 {
@@ -44,7 +49,9 @@ body {background-color: #007EA7;}
 	clear:right;
 	float:right;
 	background-color:#56ffcb;
-	opacity:.25;
+	opacity:.90;
+	width:300px;
+	height:200px;
 }
 .gameleft {
 	clear:left;
@@ -52,6 +59,8 @@ body {background-color: #007EA7;}
 	background-color:#f15635;
 	opacity:.25;
 	border-style:inset;
+	width:300px;
+	height
 }
 
 
