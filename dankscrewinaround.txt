@@ -230,3 +230,20 @@ $.ajax({
 	  <source src="http://66.90.91.26/ost/pokemon-gold-silver/aykljeeyyc/26-pokemon-gym.mp3" type="audio/mpeg">
 	</audio>
 >>>>>>> origin/tests
+
+
+
+	request.done(function(data) {
+		if(data == 0) {
+
+		$.ajax({
+			url:"php/create.php",
+			type:"POST",
+			data:posts
+		});
+		alert("Account created!")
+		}
+		else {
+			alert("Account already exists");
+		}
+	});

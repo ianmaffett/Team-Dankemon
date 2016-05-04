@@ -6,50 +6,44 @@ $(document).ready(function() {
 	$("#gameleft").hide();
 	$("#gameright").hide();
 	$("#reset").hide();
+	$("#forgotform").hide();
 });
 
 
 function valid(posts) {
-	var request = $.ajax({
+	var val;
+	
+	$.ajax({
 		url:"php/valuser.php",
 		method:"POST",
 		data:posts,
-		datatype:"text"
+		datatype:"text",
+		async:false,
+		success:function(data){
+			val = data;
+		},
+		error:function(data,status,jqXHR,error){
+			alert("Validation failure");
+		}
 	});
-
-	return data;
+	
+	return val;
 }
 
-function pass_post(posts) {
-
-	if(data == 0) {
+function pass_posts(posts) {
 
 	$.ajax({
 		url:"php/create.php",
 		type:"POST",
 		data:posts,
 		success:function(data,status,jqXHR){
-            alert("Data: " + data + "\nStatus: " + status)}
-	});
-	}
-	else {
-		alert("Account already exists");
-	}
-
-	request.done(function(data) {
-		if(data == 0) {
-
-		$.ajax({
-			url:"php/create.php",
-			type:"POST",
-			data:posts
-		});
-		alert("Account created!")
-		}
-		else {
-			alert("Account already exists");
+            alert("Account created!")
+        },
+        error:function(data,status,jqXHR,error){
+			alert("Failed to create account.");
 		}
 	});
+
 }
 
 $("#cre").click(function() {
@@ -60,11 +54,15 @@ $("#cre").click(function() {
 	var creemail = $("#creemail").val();
 
 	var posts = {user:creuser,pass:crepass,play:creplay,riv:creriv,email:creemail};
-
-	var val = val(posts);
-	alert(val);
-
-	valid(posts);
+	
+	var val = valid(posts);
+	
+	if(val == 0) {
+		pass_posts(posts);
+	}
+	else {
+		alert("Account already exists");
+	}
 });
 
 $("#create").click(function() {
@@ -73,3 +71,4 @@ $("#create").click(function() {
 	$("#login").hide();
 	$("#creform").show();
 });
+
