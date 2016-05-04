@@ -121,3 +121,12 @@ INSERT INTO types (poketype, movetype, result) VALUES ('water', 'grass', 1);
 INSERT INTO types (poketype, movetype, result) VALUES ('water', 'water', -1);
 
 INSERT INTO types (poketype, movetype, result) VALUES ('water', 'fighting', 0);
+
+
+//Update Health Queries:
+
+update pokemon set hp=90  where name="Pikachu";
+update pokemon set hp=90  where name="Espeon";
+update pokemon set hp=101  where name="Charizard";
+update pokemon set hp=103  where name="Blastoise";
+update pokemon set hp=102  where name="Venasaur";
