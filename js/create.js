@@ -38,11 +38,8 @@ function pass_posts_cre(posts) {
 		type:"POST",
 		data:posts,
 		success:function(data,status,jqXHR){
-            alert("Account created!")
-        },
-        error:function(data,status,jqXHR,error){
-			alert("Failed to create account.");
-		}
+            alert("Account created!");
+        }
 	});
 
 }
