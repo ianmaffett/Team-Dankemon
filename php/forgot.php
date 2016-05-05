@@ -1,5 +1,8 @@
 <?php 
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 $user = $_POST['user'];
 $email = $_POST['email'];
 $str = "abcdefghjklmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -21,10 +24,11 @@ $body = "Your new password is $pass";
 $headers = "From: ajpiraino@gmail.com";
 $subject = "Dankemon Battle Simulator";
 
-if (mail($email,$subject,$body,$headers)) {
+if (mail($email,$subject,$body)) {
 	echo "Mail sent!";
 }
 else {
 	echo "Mail failed to send!";
 }
+
 ?>

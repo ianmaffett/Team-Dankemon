@@ -69,17 +69,23 @@
  <a class="twitter-timeline" href="https://twitter.com/Pokemon" data-widget-id="726474468214886401">Tweets by @Pokemon</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
  </div>
+ 
+  <?php 
+
+ 	if (isset($_COOKIE['login'])) {
+ 		$cook = 1;
+ 	}
+ 	else {
+ 		$cook = 0;
+ 	}
+
+
+  ?>
+  <input type="hidden" name="cook" id="cook" value="<?php echo $cook ?>"></input>
   <script src="js/create.js" type="text/javascript"></script>
   <script src="js/valuser.js" type="text/javascript"></script>
   <script src="js/makegame.js" type="text/javascript"></script>
   <script src="js/forgot.js" type="text/javascript"></script>
-  <?php 
-
- 	if (isset($_GET['login'])) {
- 		echo '<script src="js/choose.js" type="text/javascript"></script>';
- 	}
-
-
- ?>
+  <script src="js/choose.js" type="text/javascript"></script>
 </body>
 </html>

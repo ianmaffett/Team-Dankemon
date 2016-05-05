@@ -1,53 +1,70 @@
 $("#submit").click(function() {
 	var posts = {user:$("#username").val(),pass:$("#password").val()};
-	pass_post_val(posts);
+	var val = valid(posts);
+	
+	if (val = 1) {
+		pass_posts(posts);
+		alert(val);
+	}
+	else if (val = 0) {
+		alert("Username does not exist!");
+	}
+	else {
+		alert("Something went wrong! Refresh and try again.");
+	}
 });
 
-
-function pass_post_val(posts) {
-
-	var posts2=posts;
+function valid(posts) {
+	var val;
 	
-	var request = $.ajax({
+	$.ajax({
 		url:"php/valuser.php",
 		method:"POST",
 		data:posts,
-		datatype:"text"
-	});
-	
-	
-	request.done(function(data) {
-		if(data == 1) {
-		
-		var passreq = $.ajax({
-			url:"php/valpass.php",
-			type:"POST",
-			data:posts2,
-			dataType:"text",
-			error:function(data,error){
-				alert(data + ' ' + error);
-			}
-		});
-		
-		passreq.error(function(data,error) {
-			alert(data + ' ' + error);
-		})
-		
-		passreq.done(function(data) {
-			if(data == 1) {
-				alert("Success!");
-				
-				window.location.href = window.location.href + "?login=true";
-			}
-			else {
-				alert("Wrong username/password combination. Please refresh your browser.");
-			}
-		
-		});
-		}
-		else { 
-			alert("Username does not exist!");
+		datatype:"text",
+		async:false,
+		success:function(data){
+			val = data;
+		},
+		error:function(data,status,jqXHR,error){
+			alert("Validation failure");
 		}
 	});
-	return false;
+	
+	return val;
+}
+
+function pass_posts(posts) {
+	var val;
+	
+	$.ajax({
+		url:"php/valpass.php",
+		method:"POST",
+		data:posts,
+		datatype:"text",
+		async:false,
+		success:function(data){
+			val = data;
+		},
+		error:function(data,status,jqXHR,error){
+			alert("Validation failure");
+		}
+	});
+	
+	return val;
+	
+	if (val = 1) {
+		login(posts);
+		alert("Login succesful!");
+	}
+	else if (val = 0) {
+		alert("Username does not match password!");
+	}
+	else {
+		alert("Something went wrong! Refresh and try again.");
+	}
+}
+
+function login(posts) {
+	document.cookie = "user="posts.user;
 }

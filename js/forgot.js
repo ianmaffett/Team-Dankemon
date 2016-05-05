@@ -29,6 +29,7 @@ function pass_posts(posts) {
 		async:false,
 		success:function(data){
 			test = data;
+			alert(data);
 		},
 		error:function(data,status,jqXHR,error){
 			alert("Validation failure");

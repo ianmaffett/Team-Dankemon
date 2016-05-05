@@ -1,8 +1,10 @@
+if ($("#cook").attr(value) == 1) {
+
 $(document).ready(function() {
 	$("#choose").show();
 	$("#chooseform").show();
 	$("#create").hide();
-	$("#forgot").hide();
+	$("#forgotbutton").hide();
 	$("#login").hide();
 });
 
@@ -145,3 +147,4 @@ $("#choose").click(function() {
 	$("#choosepoke").show();
 	$("#chooseform").append(makechoose());
 });
+}
