@@ -1,0 +1,249 @@
+$i = 0;
+  		for($i = 0 ; $i < 3 ; $i++) {
+  			$str .= "<h5>" . $xml->channel->item[$i]->title . "</h5>";
+  		}
+  		
+$kids = $xml->channel->children('item', TRUE);
+$max = count($kids);
+
+
+
+INSERT INTO pokemon (name, type1, type2, hp, att, def, spatt, spdef, spd, move1, move1type, move1pow, move1acc, move1eff, move1pp, move2, move2type, move2pow, move2acc, move2eff, move2pp, move3, move3type, move3pow, move3acc, move3eff, move3pp, move4, move4type, move4pow, move4acc, move4eff, move4pp, move1phys, move2phys, move3phys, move4phys)
+
+INSERT INTO pokemon (name, type1, hp, att, def, spatt, spdef, spd, move1, move1type, move1pow, move1acc, move1pp, move2, move2type, move2pow, move2acc, move2eff, move2pp, move3, move3type, move3acc, move3eff, move3pp, move4, move4type, move4pow, move4acc, move4eff, move4pp, move1phys, move2phys, move4phys) VALUES ('Pikachu','Electric',70,65,45,80,50,130,'Thunderbolt','Electric',95,100,15,'Quick Attack','Normal',40,100,'priority',30,'Thunder Wave','Electric',100,'Paralysis',20,'Thunder','Electric',120,70,'Paralysis',10,false,true,false)
+
+INSERT INTO pokemon (name, type1, hp, att, def, spatt, spdef, spd, move1, move1type, move1pow, move1acc, move1pp, move2, move2type, move2pow, move2acc, move2pp, move3, move3type, move3acc, move3eff, move3pp, move4, move4type, move4acc, move4eff, move4pp, move1phys, move2phys) VALUES ('Espeon','Psychic',65,65,60,130,95,110,'Psychic','Psychic',90,100,10,'Swift','Normal',60,100,20,'Swagger','Normal',90,'Confusion',15,'Morning Sun','Psychic',100,'GainHP',5,false,true)
+
+INSERT INTO pokemon (name, type1, hp, att, def, spatt, spdef, spd, move1, move1type, move1pow, move1acc, move1pp, move2, move2type, move2pow, move2acc, move2pp, move3, move3type, move3pow, move3acc, move3pp, move4, move4type, move4pow, move4acc, move4pp, move1phys, move2phys, move3phys, move4phys) VALUES ('Snorlax','Normal',160,110,65,65,110,30,'Body Slam','Normal',85,100,15,'Ice Beam','Ice',95,100,10,'Crunch','Dark',80,100,15,'Hyperbeam','Normal',120,100,5,true,false,true,false)
+
+Pokemon Type: Electric, Normal, Psychic, Grass, Fire, Water
+
+Move Types: Electric, Normal, Dark, Ice, Psychic, Grass, Fire, Fighting, Water
+
+Data: hey
+Notice: Undefined index: creusername in /home/pirainoa/public_html/Team-Dankemon/php/create.php on line 5
+
+Notice: Undefined index: crepassword in /home/pirainoa/public_html/Team-Dankemon/php/create.php on line 6
+
+Notice: Undefined index: creplayer in /home/pirainoa/public_html/Team-Dankemon/php/create.php on line 7
+
+Notice: Undefined index: crerival in /home/pirainoa/public_html/Team-Dankemon/php/create.php on line 8
+
+Notice: Undefined index: creemail in /home/pirainoa/public_html/Team-Dankemon/php/create.php on line 9
+Could not connect to database: Unknown MySQL server host 'http://cscilab.bc.edu/phpmyadmin/index.php?db=pirainoa&token=4ed3034051823cd4669b3b6d31334eca' (1)
+Status: success
+
+$user = $_POST['creusername'];
+$pass = sha1($_POST['crepassword']);
+$play = $_POST['creplayer'];
+$riv = $_POST['crerival'];
+$email = $_POST['creemail'];
+
+"datauser":null,"datapass":"da39a3ee5e6b4b0d3255bfef95601890afd80709","dataplay":null,"datariv":null,"dataemail":null}Could not connect to database: Access denied for user 'pirainoa'@'localhost' (using password: YES)
+
+$data_from_post = array('datauser' => $user, 'datapass' => $pass, 'dataplay' => $play, 'datariv' => $riv, 'dataemail' => $email);
+echo json_encode($data_from_post);
+
+	$.post("php/create.php",
+		{user:creuser,pass:crepass,play:creplay,riv:creriv,email:creemail},
+		function(data,status,jqXHR){
+            alert("Data: " + data + "\nStatus: " + status)}
+
+<<<<<<< HEAD
+//twitter feed stuff
+
+<a class="twitter-timeline" href="https://twitter.com/Pokemon" data-widget-id="726474468214886401">Tweets by @Pokemon</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+=======
+
+select * from pokemon where id=i; inside a for loop through i=1,2,3,4,5,6
+
+they choose 
+>>>>>>> origin/tests
+
+
+
+5/1
+
+Parse error: syntax error, unexpected T_STRING in /home/pirainoa/public_html/Team-Dankemon/php/valuser.php on line 11
+success
+
+if (int msqli_num_rows($result) > 0) {
+	echo 1;
+}
+else {
+	echo 0;
+}
+
+echo $strres['username'];
+
+,play:creplay,riv:creriv,email:creemail};
+
+,
+			success:function(data,status,jqXHR){
+				alert("Ajax!!! " + data + status);
+			},
+			error:function(data,status,jqXHR){
+				alert("Ajax!!! " + data + status);
+			}
+			
+			String(valid(posts).success(function(data){return data}))
+			
+			
+
+	request.done(function(data) { $("#testdiv") = data } );
+};
+
+/*function pass_post(posts) {
+	
+	if(data == 0) {
+		
+	$.ajax({
+		url:"php/create.php",
+		type:"POST",
+		data:posts,
+		success:function(data,status,jqXHR){
+            alert("Data: " + data + "\nStatus: " + status)}
+	});
+	}
+	else { 
+		alert("Account already exists");
+	}
+}*/
+
+
+success:function(data,status,jqXHR){
+				alert("Ajax!!! " + data + status);
+			},
+			error:function(data,status,jqXHR,error){
+				alert("Ajax!!! " + data + status + error);
+			}
+			
+			
+			$("#create").hide();
+				$("#forgot").hide();
+				$("#login").hide();
+				$("#choose").show();
+				
+	
+$("#logoff").click(function(){
+	$.ajax({
+		url:"php/login.php",
+		method:"GET",
+		data:{login:0},
+		success:function(data,status,jqXHR){
+			alert("Login session started " + data + status);
+		},
+		error:function(data,status,jqXHR,error){
+			alert("Login session failed " + data + status + error);
+		}
+	});
+});
+
+<button name="logoff" id="logoff">Log Off</button>
+
+
+
+$.ajax({
+					url:"php/login.php",
+					method:"GET",
+					data:{login:1},
+					success:function(data,status,jqXHR){
+						alert("Login session started " + data + status);
+					},
+					error:function(data,status,jqXHR,error){
+						alert("Login session failed " + data + status + error);
+					}
+				});
+				
+				
+	$i
+	
+	
+	
+	var passreq = $.ajax({
+			url:"php/valpass.php",
+			type:"POST",
+			data:posts2,
+			dataType:"text",
+			error:function(data,error){
+				alert(data + ' ' + error);
+			}
+		});
+		
+		var passreq = $.post(
+			"php/valpass.php",
+			posts2,
+			function(data,error){
+				alert("Success!");
+			},
+			dataType:"text")
+		);
+		
+	
+		
+		
+		
+		var choosereq = $.ajax({
+			url:"php/choose.php",
+			method:"GET",
+			data:i,
+			dataType:"json",
+			error:function(data,status,error){
+				alert(data+status+error);
+			}
+		});
+		
+		choosereq.done(function(data){
+			pokes.push(data["name"])
+		});
+		
+		$.getJSON("php/choose.php",function(data) {
+			$.each(data, function(name,pokeinfo,pokeimg){
+				pokes.push(name,pokeinfo,pokeimg);
+			});
+		});
+		
+		
+		var poke1 = $.get(
+			"php/choose.php",
+			{"id":1},
+			function(data){
+				alert(data.name);
+				poke1name = data.name;
+			},
+			"json");
+			
+			
+	pokemon.toString(",") + "<br>" + move1.toString(",") + "<br>" + move2.toString(",") + "<br>" + move3.toString(",") + "<br>" + move4.toString(",")
+	
+<<<<<<< HEAD
+	5/3
+	
+	$("#move1radio").val(move1[0]);
+=======
+	
+//Audio Stuff
+
+	<audio autoplay loop="loop">
+	  <source src="http://66.90.91.26/ost/pokemon-gold-silver/aykljeeyyc/26-pokemon-gym.mp3" type="audio/mpeg">
+	</audio>
+>>>>>>> origin/tests
+
+
+
+	request.done(function(data) {
+		if(data == 0) {
+
+		$.ajax({
+			url:"php/create.php",
+			type:"POST",
+			data:posts
+		});
+		alert("Account created!")
+		}
+		else {
+			alert("Account already exists");
+		}
+	});

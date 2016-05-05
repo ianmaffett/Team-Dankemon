@@ -1,0 +1,34 @@
+//Venusaur:
+
+<a href="http://pokemondb.net/pokedex/venusaur"><img src="http://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif" alt="Venusaur"></a>
+
+//Blastoise:
+
+<a href="http://pokemondb.net/pokedex/blastoise"><img src="http://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif" alt="Blastoise"></a>
+
+//Charizard:
+
+<a href="http://pokemondb.net/pokedex/charizard"><img src="http://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" alt="Charizard"></a>
+
+//Pikachu:
+
+<a href="http://pokemondb.net/pokedex/pikachu"><img src="http://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif" alt="Pikachu"></a>
+
+//Snorlax:
+
+<a href="http://pokemondb.net/pokedex/snorlax"><img src="http://img.pokemondb.net/sprites/black-white/anim/normal/snorlax.gif" alt="Snorlax"></a>
+
+//Espeon:
+
+<a href="http://pokemondb.net/pokedex/espeon"><img src="http://img.pokemondb.net/sprites/black-white/anim/normal/espeon.gif" alt="Espeon"></a>
+
+
+//MEWTWO STUFF!!!!!
+
+<img src="http://img.pokemondb.net/sprites/black-white/anim/normal/mewtwo.gif" alt="Espeon">
+
+var mewtwo = new array ("Mewtwo", "Psychic", 106, 110, 90, 154, 90, 130);
+var mewmove1 = new array ("Headbutt", "Normal", 70, 100,, 15);
+var mewmove2 = new array ("Body Slam", "Normal", 85, 100,, 15);
+var mewmove3 = new array ("Psychic", "Psychic", 90, 100,, 10);
+var mewmove4 = new array ("Psystrike", "Psychic", 100, 100,, 10);

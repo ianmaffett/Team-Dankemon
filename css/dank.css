@@ -2,14 +2,127 @@
 	font-family:courier;
 	text-align:center;
 }
+
+h1 {font-size: 400%; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: white;}
+h2 {color: black; font-size: 200%;}
+
+body {
+background: #403B4A; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #403B4A , #E7E9BB); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #403B4A , #E7E9BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+button {
+    background-color: #555555;
+    font-size: 20px;
+    border-radius: 12px;
+    border: 2px solid gray;
+    color: white;
+    transition-duration: 0.4s;
+    text-align: center;
+    display: inline-block;
+    }
+
+button:hover{
+    background-color: white;
+    color: black;
+    }
+    
+input[type="submit"] {
+	background-color: #555555;
+	font-size: 20px;
+	border-radius: 12px;
+	border: 2px solid gray;
+	color: white;
+	transition-duration: 0.4s;
+	text-align: center;
+	display: inline-block;
+    }
+
+input[type="submit"]:hover {
+	background-color: white;
+	color: black;
+    }
+    
+#newshead {background-color:white;
+	box-sizing: border-box;
+    	-moz-box-sizing: border-box;
+    	-webkit-box-sizing: border-box;
+    	border-top-style: double;
+    	border-right-style: double;
+    	border-bottom-style: solid;
+    	border-left-style: double;
+}
+
 #header li {
 	display:inline;
 }
 #gamediv {
 	float:left;
 	width:75%;
+	font-weight:bold;
+	font-size:120%;
 }
 #newsdiv {
+	clear:right;
+	float:right;
+	width:25%;
+	height:300px;
+	overflow-y:scroll;
+	background-color:white;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border-top-style: none;
+	border-right-style: double;
+	border-bottom-style: solid;
+    	border-left-style: double;
+}
+
+#newsdiv1 {
+	clear:right;
+	float:right;
+	width:25%;
+	height:300px;
+	overflow-y:scroll;
+	background-color: white;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border-top-style: none;
+	border-right-style: double;
+	border-bottom-style: double;
+    	border-left-style: double;
+}
+.small {
+	font-size:50%;
+}
+.right {
 	float:right;
 	width:25%;
 }
+#gameright {
+	clear:right;
+	float:right;
+	background-color:#f15635;
+	opacity:.90;
+	border-style:inset;
+	width:40%;
+	height:50%;
+}
+#gameleft {
+	clear:left;
+	float:left;
+	background-color:#56ffcb;
+	opacity:.90;
+	border-style:inset;
+	width:40%;
+	height:50%;
+}
+#reset {
+	position:float;
+	margin:10%;
+}
+
+
+
