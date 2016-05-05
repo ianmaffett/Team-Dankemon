@@ -1,4 +1,4 @@
-if ($("#cook").attr(value) == 1) {
+if ($("#cook").attr("value") == 1) {
 
 $(document).ready(function() {
 	$("#choose").show();

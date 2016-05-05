@@ -11,8 +11,31 @@ var mewmove3 = new Array ("Psychic","Psychic",90,60,null,10,false);
 var mewmove4 = new Array ("Psystrike","Psychic",100,40,null,10,false);
 var opphp = mewtwo[2];
 
-function reset() {
-	
+function reset(result) {
+	$("#logoff").show();
+	$("#reset").show();
+	$("#choosemove").hide();
+
+	if (result.win == 1) {
+		$.ajax({
+		url:"php/win.php",
+		type:"GET",
+		data:result,
+		error:function(data,status,jqXHR,error){
+			alert("Update failure");
+		}
+	});
+	}
+	else if (result.win == 0) {
+		$.ajax({
+		url:"php/loss.php",
+		type:"GET",
+		data:result,
+		error:function(data,status,jqXHR,error){
+			alert("Update failure");
+		}
+	});
+	}
 }
 
 function creategame(pokemon,move1,move2,move3,move4) {
@@ -159,34 +182,59 @@ function makemove(move) {
 
 function move() {
 	var tie = Math.random();
+	var res;
 	
 	if (pokemon[7] > mewtwo[7]) {
 		makemove($("input[type='radio'][name='move']:checked").val());
-		oppmove();
+		if (results() !== 1) {
+			oppmove();
+			results();
+		}
 	}
 	else if (pokemon[7] < mewtwo[7]) {
 		oppmove();
-		makemove($("input[type='radio'][name='move']:checked").val());
+		if (results() !== 1) {
+			makemove($("input[type='radio'][name='move']:checked").val());
+			results();
+		}
+		
 	}
 	else if (tie > .5) {
 		makemove($("input[type='radio'][name='move']:checked").val());
-		oppmove();
+		if (results() !== 1) {
+			oppmove();
+			results();
+		}
 	}
 	else {
 		oppmove();
-		makemove($("input[type='radio'][name='move']:checked").val());
+		if (results() !== 1) {
+			makemove($("input[type='radio'][name='move']:checked").val());
+			results();
+		}
 	}
 	
+}
+
+function results() {
 	if ($("#opphp").html() <= 0) {
 		$("#opphp").html(0);
 		alert("Mewtwo fainted!");
-		$("#reset").show();
+		var res = 1;
+		var you = $("#you").attr("value");
+		var result = {user:you,win:res};
+		reset(result);
+		return 1;
 	}
 	
 	if ($("#curhp").html() <= 0) {
 		$("#curhp").html(0);
 		alert(pokemon[0] + " fainted!");
-		$("#reset").show();
+		var res = 0;
+		var you = $("#you").attr("value");
+		var result = {user:you,win:res};
+		reset(result);
+		return 1;
 	}
 		
 }
@@ -199,5 +247,14 @@ $("#choosepoke").click(function() {
 
 $("#choosemove").click(function() {
 	move();
+});
+
+$("#reset").click(function() {
+	location.reload();
+});
+
+$("#logoff").click(function() {
+	document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+	location.reload();
 });
 

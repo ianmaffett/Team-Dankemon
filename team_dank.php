@@ -41,7 +41,8 @@
  	</form>
  	<form name="chooseform" id="chooseform">
  	</form>
- 	<button name="reset" id="reset">Play Again</button>
+ 	<button name="reset" id="reset">Play Again!</button>
+ 	<button name="logoff" id="logoff">Log Off</button>
 
  	<div id='gameleft'>
  		<img src='' alt='Your Pokemon' id="pokeimg" /><br><br>
@@ -69,27 +70,22 @@
  <a class="twitter-timeline" href="https://twitter.com/Pokemon" data-widget-id="726474468214886401">Tweets by @Pokemon</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
  </div>
-<<<<<<< HEAD
+
  
   <?php 
-=======
-  <script src="js/create.js" type="text/javascript"></script>
-  <script src="js/valuser.js" type="text/javascript"></script>
-  <script src="js/makegame.js" type="text/javascript"></script>
-  <script src="js/forgot.js" type="text/javascript"></script>
-  <?php
->>>>>>> origin/tests
 
- 	if (isset($_COOKIE['login'])) {
+ 	if (isset($_COOKIE['user'])) {
  		$cook = 1;
+ 		$username = $_COOKIE['user'];
  	}
  	else {
  		$cook = 0;
+ 		$username = "";
  	}
-
 
   ?>
   <input type="hidden" name="cook" id="cook" value="<?php echo $cook ?>"></input>
+  <input type="hidden" name="you" id="you" value="<?php echo $username ?>"></input>
   <script src="js/create.js" type="text/javascript"></script>
   <script src="js/valuser.js" type="text/javascript"></script>
   <script src="js/makegame.js" type="text/javascript"></script>

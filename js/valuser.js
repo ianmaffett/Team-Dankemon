@@ -1,12 +1,11 @@
 $("#submit").click(function() {
 	var posts = {user:$("#username").val(),pass:$("#password").val()};
-	var val = valid(posts);
+	var val = valuser(posts);
 	
-	if (val = 1) {
-		pass_posts(posts);
-		alert(val);
+	if (val == 1) {
+		passposts(posts);
 	}
-	else if (val = 0) {
+	else if (val == 0) {
 		alert("Username does not exist!");
 	}
 	else {
@@ -14,7 +13,7 @@ $("#submit").click(function() {
 	}
 });
 
-function valid(posts) {
+function valuser(posts) {
 	var val;
 	
 	$.ajax({
@@ -34,7 +33,7 @@ function valid(posts) {
 	return val;
 }
 
-function pass_posts(posts) {
+function passposts(posts) {
 	var val;
 	
 	$.ajax({
@@ -51,13 +50,11 @@ function pass_posts(posts) {
 		}
 	});
 	
-	return val;
-	
-	if (val = 1) {
+	if (val == 1) {
 		login(posts);
 		alert("Login succesful!");
 	}
-	else if (val = 0) {
+	else if (val == 0) {
 		alert("Username does not match password!");
 	}
 	else {
@@ -66,5 +63,5 @@ function pass_posts(posts) {
 }
 
 function login(posts) {
-	document.cookie = "user="posts.user;
+	document.cookie = "user=" + posts.user;
 }

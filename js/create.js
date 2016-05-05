@@ -7,15 +7,16 @@ $(document).ready(function() {
 	$("#gameright").hide();
 	$("#reset").hide();
 	$("#forgotform").hide();
+	$("#logoff").hide();
 });
 
 
-function valid(posts) {
+function validcre(posts) {
 	var val;
 	
 	$.ajax({
 		url:"php/valuser.php",
-		method:"POST",
+		type:"POST",
 		data:posts,
 		datatype:"text",
 		async:false,
@@ -30,7 +31,7 @@ function valid(posts) {
 	return val;
 }
 
-function pass_posts(posts) {
+function pass_posts_cre(posts) {
 
 	$.ajax({
 		url:"php/create.php",
@@ -55,10 +56,10 @@ $("#cre").click(function() {
 
 	var posts = {user:creuser,pass:crepass,play:creplay,riv:creriv,email:creemail};
 	
-	var val = valid(posts);
+	var val = validcre(posts);
 	
 	if(val == 0) {
-		pass_posts(posts);
+		pass_posts_cre(posts);
 	}
 	else {
 		alert("Account already exists");
@@ -67,7 +68,7 @@ $("#cre").click(function() {
 
 $("#create").click(function() {
 	$("#create").hide();
-	$("#forgot").hide();
+	$("#forgotbutton").hide();
 	$("#login").hide();
 	$("#creform").show();
 });
